@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Http"
+        xmlns:util="clr-namespace:Wpf.Util"
         mc:Ignorable="d"
         Icon="Resources/icon.png"
         Title="Http" Height="350" Width="520">
@@ -25,11 +26,11 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <ListView x:Name="listView">
+            <ListView x:Name="listView" IsSynchronizedWithCurrentItem="True" util:GridViewSort.AutoSort="True">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="IP" DisplayMemberBinding="{Binding IP}" Width="220"/>
-                        <GridViewColumn Header="Count" DisplayMemberBinding="{Binding Count}" Width="220"/>
+                        <GridViewColumn Header="IP" DisplayMemberBinding="{Binding IP}" Width="220" util:GridViewSort.PropertyName="IP"/>
+                        <GridViewColumn Header="Count" DisplayMemberBinding="{Binding Count}" Width="220" util:GridViewSort.PropertyName="Count"/>
                     </GridView>
                 </ListView.View>
             </ListView>

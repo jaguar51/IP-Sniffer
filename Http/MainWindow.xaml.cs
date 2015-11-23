@@ -17,7 +17,6 @@ namespace Http
         private bool bContinueCapturing = false;            //A flag to check if packets are to be captured or not
 
         private ObservableCollection<IPItem> listIPItems = new ObservableCollection<IPItem>();
-        private ArrayList arrayListIPItems = new ArrayList();
 
         public MainWindow()
         {
